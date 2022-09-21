@@ -64,8 +64,8 @@
       <recent name="D:\QAEngineer\QANetologyLessons\MyAutomationLessons\MyAutomationSelenide\artifacts" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.CardDeliveryTest.shouldTestCardDelivery (1)">
-    <configuration name="CardDeliveryTest (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.CardDeliveryTest">
+    <configuration name="CardDeliveryTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -88,7 +88,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="CardDeliveryTest.shouldTestCardDelivery (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CardDeliveryTest.shouldTestCalendar" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -101,7 +101,76 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;ru.netology.carddelivery.CardDeliveryTest.shouldTestCardDelivery&quot;" />
+            <option value="&quot;ru.netology.carddelivery.CardDeliveryTest.shouldTestCalendar&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="CardDeliveryTest.shouldTestCalendarDateInAYear" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;ru.netology.carddelivery.CardDeliveryTest.shouldTestCalendarDateInAYear&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="CardDeliveryTest.shouldTestCalendarDateInNextMonth" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;ru.netology.carddelivery.CardDeliveryTest.shouldTestCalendarDateInNextMonth&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="CardDeliveryTest.shouldTestCityListOpen" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;ru.netology.carddelivery.CardDeliveryTest.shouldTestCityListOpen&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -113,8 +182,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.CardDeliveryTest.shouldTestCardDelivery (1)" />
-        <item itemvalue="Gradle.CardDeliveryTest (1)" />
+        <item itemvalue="Gradle.CardDeliveryTest" />
+        <item itemvalue="Gradle.CardDeliveryTest.shouldTestCalendarDateInAYear" />
+        <item itemvalue="Gradle.CardDeliveryTest.shouldTestCalendarDateInNextMonth" />
+        <item itemvalue="Gradle.CardDeliveryTest.shouldTestCalendar" />
+        <item itemvalue="Gradle.CardDeliveryTest.shouldTestCityListOpen" />
       </list>
     </recent_temporary>
   </component>
@@ -246,7 +318,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663777214336</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Initial commit">
+      <created>1663777463958</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1663777463958</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
