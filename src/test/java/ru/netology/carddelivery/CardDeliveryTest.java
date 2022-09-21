@@ -18,10 +18,10 @@ public class CardDeliveryTest {
 
     @BeforeEach
     void setUp() {
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--disable-dev-shm-usage");
-        options.addArguments("--no-sandbox");
-        options.addArguments("--headless");
+//        ChromeOptions options = new ChromeOptions();
+//        options.addArguments("--disable-dev-shm-usage");
+//        options.addArguments("--no-sandbox");
+//        options.addArguments("--headless");
         open("http://localhost:9999/");
     }
 
@@ -35,6 +35,7 @@ public class CardDeliveryTest {
         $("[data-test-id=\"agreement\"]").click();
         $("[class=\"button__text\"]").click();
         $("#root > div > div > div.notification__content").shouldBe(visible, Duration.ofSeconds(15));
+        $("#root > div > div > div.notification__title").shouldHave(text("Успешно!"));
         $("#root > div > div > div.notification__content").shouldHave(text("Встреча успешно забронирована на "+ date));
     }
 }
