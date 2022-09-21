@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c20df045-28e5-428e-9dbd-891d20faa1f1" name="Changes" comment="Initial commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/netology/carddelivery/CardDeliveryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/netology/carddelivery/CardDeliveryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +52,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;last_directory_selection&quot;: &quot;D:/QAEngineer/QANetologyLessons/MyAutomationLessons/MyAutomationSelenide/src/test/java&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/QAEngineer/QANetologyLessons/MyAutomationLessons/MyAutomationSelenide/artifacts&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/QAEngineer/QANetologyLessons/MyAutomationLessons/MyAutomationSelenide&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.17&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.40804598&quot;
@@ -60,8 +60,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\QAEngineer\QANetologyLessons\MyAutomationLessons\MyAutomationSelenide\artifacts" />
       <recent name="D:\QAEngineer\QANetologyLessons\MyAutomationLessons\MyAutomationSelenide" />
+      <recent name="D:\QAEngineer\QANetologyLessons\MyAutomationLessons\MyAutomationSelenide\artifacts" />
     </key>
   </component>
   <component name="RunManager" selected="Gradle.CardDeliveryTest">
@@ -155,7 +155,21 @@
       <option name="project" value="LOCAL" />
       <updated>1663771878265</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Initial commit">
+      <created>1663772044060</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1663772044060</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Initial commit">
+      <created>1663772224340</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1663772224340</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
