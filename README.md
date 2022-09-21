@@ -1,1 +1,1 @@
-[![Build status](https://ci.appveyor.com/api/projects/status/a7jj3ymbtm8432hp?svg=true)](https://ci.appveyor.com/project/QA-USV/myautomationselenide)
+[![Build status](https://ci.appveyor.com/api/projects/status/x8hysqy2xofr0820?svg=true)](https://ci.appveyor.com/project/QA-USV/myautomationselenide)
