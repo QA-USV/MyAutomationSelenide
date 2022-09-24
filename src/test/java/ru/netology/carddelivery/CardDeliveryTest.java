@@ -15,6 +15,10 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class CardDeliveryTest {
 
+    public String generateDate(int days) {
+        return LocalDate.now().plusDays(days).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
+    }
+
     @BeforeEach
     void setUp() {
         ChromeOptions options = new ChromeOptions();
@@ -26,41 +30,48 @@ public class CardDeliveryTest {
 
     @Test
     void shouldTestCardDelivery() {
-        String date = LocalDate.now().plusDays(3).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
-        $x("//*[@placeholder=\"Город\"]").setValue("Москва");
-        $("[placeholder=\"Дата встречи\"]").doubleClick().sendKeys(Keys.DELETE + date);
-        $("[name=\"name\"]").setValue("Смит Джон");
-        $("[name=\"phone\"]").setValue("+79999999999");
-        $("[data-test-id=\"agreement\"]").click();
-        $("[class=\"button__text\"]").click();
-        $("#root > div > div > div.notification__content").shouldBe(visible, Duration.ofSeconds(15));
-        $("#root > div > div > div.notification__title").shouldHave(text("Успешно!"));
-        $("#root > div > div > div.notification__content").shouldHave(text("Встреча успешно забронирована на " + date));
+        String meetingDate = generateDate(3);
+        $("[placeholder='Город']").setValue("Москва");
+        $("[placeholder='Дата встречи']").doubleClick().sendKeys(Keys.DELETE + meetingDate);
+        $("[name='name']").setValue("Смит Джон");
+        $("[name='phone']").setValue("+79999999999");
+        $("[data-test-id='agreement']").click();
+        $(".button__text").click();
+        $(".notification__title").shouldBe(visible, Duration.ofSeconds(15));
+        $(".notification__title").shouldHave(exactText("Успешно!"));
+        $(".notification__content").shouldHave(exactText("Встреча успешно забронирована на " + meetingDate));
     }
 
     @Test
-    void shouldTestCityListOpen() {
-        $x("//*[@placeholder=\"Город\"]").setValue("Мо");
-        $x("/html/body/div[3]/div/div/div").shouldBe(visible);
-    }
-
-    @Test
-    void shouldTestCalendarDate() {
-        $x("//*[@id=\"root\"]/div/form/fieldset/div[2]/span/span/span/span/span[1]/span/button").click();
-        $x("/html/body/div[2]/div/div/div/div/div/table/tbody/tr[6]/td[4]").click();
-    }
-
-    @Test
-    void shouldTestCalendarDateInNextMonth() {
-        $x("//*[@id=\"root\"]/div/form/fieldset/div[2]/span/span/span/span/span[1]/span/button").click();
-        $x("/html/body/div[2]/div/div/div/div/div/div/div[4]").click();
-        $x("/html/body/div[2]/div/div/div/div/div/table/tbody/tr[4]/td[5]").click();
+    void shouldTestDropdowns() {
+        $("[placeholder='Город']").setValue("Мо");
+        $(".input__popup>div>div>div>div>div:nth-child(3)").click();
+        $("[class='icon icon_size_m icon_name_calendar icon_theme_alfa-on-white']").click();
+        $("[data-day='1664485200000']").click();
+        String meetingDate = $("[placeholder='Дата встречи']").getValue();
+        $("[name='name']").setValue("Смит Джон");
+        $("[name='phone']").setValue("+79999999999");
+        $("[data-test-id='agreement']").click();
+        $(".button__text").click();
+        $(".notification__title").shouldBe(visible, Duration.ofSeconds(15));
+        $(".notification__title").shouldHave(exactText("Успешно!"));
+        $(".notification__content").shouldHave(exactText("Встреча успешно забронирована на " + meetingDate));
     }
 
     @Test
     void shouldTestCalendarDateInAYear() {
-        $x("//*[@id=\"root\"]/div/form/fieldset/div[2]/span/span/span/span/span[1]/span/button").click();
-        $x("/html/body/div[2]/div/div/div/div/div/table/tbody/tr[1]/th[7]").click();
-        $x("/html/body/div[2]/div/div/div/div/div/table/tbody/tr[4]/td[5]").click();
+        $("[placeholder='Город']").setValue("Мо");
+        $(".input__popup>div>div>div>div>div:nth-child(3)").click();
+        $("[class='icon icon_size_m icon_name_calendar icon_theme_alfa-on-white']").click();
+        $("[class='calendar__arrow calendar__arrow_direction_right calendar__arrow_double']").click();
+        $("[data-day='1695157200000']").click();
+        String meetingDate = $("[placeholder='Дата встречи']").getValue();
+        $("[name='name']").setValue("Смит Джон");
+        $("[name='phone']").setValue("+79999999999");
+        $("[data-test-id='agreement']").click();
+        $(".button__text").click();
+        $(".notification__title").shouldBe(visible, Duration.ofSeconds(15));
+        $(".notification__title").shouldHave(exactText("Успешно!"));
+        $(".notification__content").shouldHave(exactText("Встреча успешно забронирована на " + meetingDate));
     }
 }
