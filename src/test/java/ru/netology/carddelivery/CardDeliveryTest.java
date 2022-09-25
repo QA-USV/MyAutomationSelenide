@@ -58,7 +58,24 @@ public class CardDeliveryTest {
     }
 
     @Test
-    void shouldTestCalendarDateInAYear() {
+    void shouldTestCalendarDateNextMonth() {
+        $("[placeholder='Город']").setValue("Юж");
+        $("[class='menu-item__control']").click();
+        $("[class='icon icon_size_m icon_name_calendar icon_theme_alfa-on-white']").click();
+        $("[class='calendar__arrow calendar__arrow_direction_right']").click();
+        $("[data-day='1665435600000']").click();
+        String meetingDate = $("[placeholder='Дата встречи']").getValue();
+        $("[name='name']").setValue("Смит Джон");
+        $("[name='phone']").setValue("+79999999999");
+        $("[data-test-id='agreement']").click();
+        $(".button__text").click();
+        $(".notification__title").shouldBe(visible, Duration.ofSeconds(15));
+        $(".notification__title").shouldHave(exactText("Успешно!"));
+        $(".notification__content").shouldHave(exactText("Встреча успешно забронирована на " + meetingDate));
+    }
+
+    @Test
+    void shouldTestCalendarDateNextYear() {
         $("[placeholder='Город']").setValue("Мо");
         $(".input__popup>div>div>div>div>div:nth-child(3)").click();
         $("[class='icon icon_size_m icon_name_calendar icon_theme_alfa-on-white']").click();
