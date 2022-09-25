@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
@@ -46,11 +47,10 @@ public class CardDeliveryTest {
 
     @Test
     void shouldTestDropdowns() {
-
         $("[placeholder='Город']").setValue("Мо");
         $(".input__popup>div>div>div>div>div:nth-child(3)").click();
         $(".icon.icon_size_m.icon_name_calendar.icon_theme_alfa-on-white").click();
-        $("[data-day='1664485200000']").click();
+        $("td[data-day='1664485200000']").click();
         String meetingDate = $("[placeholder='Дата встречи']").getValue();
         $("[name='name']").setValue("Смит Джон");
         $("[name='phone']").setValue("+79999999999");
