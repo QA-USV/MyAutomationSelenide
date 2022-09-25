@@ -1,14 +1,10 @@
 package ru.netology.carddelivery;
 
-import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.commands.ShouldBe;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.chrome.ChromeOptions;
-
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 import java.time.LocalDate;
