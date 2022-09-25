@@ -2,17 +2,15 @@ package ru.netology.carddelivery;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.time.Duration;
 import java.time.LocalDate;
-import java.time.Month;
-import java.time.chrono.ChronoLocalDate;
 import java.time.format.DateTimeFormatter;
 
-import static com.codeborne.selenide.Condition.*;
+import static com.codeborne.selenide.Condition.exactText;
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.*;
 
 public class CardDeliveryTest {
@@ -50,10 +48,6 @@ public class CardDeliveryTest {
         $(".input__popup>div>div>div>div>div:nth-child(3)").click();
         $(".icon.icon_size_m.icon_name_calendar.icon_theme_alfa-on-white").click();
         $(".calendar__day.calendar__day_state_current").click();
-//
-////        String month = new ChronoLocalDate(Month);
-//        $$("class='calendar__layout'").getClass()
-//        $("td[data-day='1664485200000']").click();
         String meetingDate = $("[placeholder='Дата встречи']").getValue();
         $("[name='name']").setValue("Смит Джон");
         $("[name='phone']").setValue("+79999999999");
@@ -69,9 +63,8 @@ public class CardDeliveryTest {
         $("[placeholder='Город']").setValue("Юж");
         $("[class='menu-item__control']").click();
         $("[class='icon icon_size_m icon_name_calendar icon_theme_alfa-on-white']").click();
-//        if($(""))
         $("[class='calendar__arrow calendar__arrow_direction_right']").click();
-        $("[data-day='1665435600000']").click();
+        $x("//tbody/tr[5]/td[3]").click();
         String meetingDate = $("[placeholder='Дата встречи']").getValue();
         $("[name='name']").setValue("Смит Джон");
         $("[name='phone']").setValue("+79999999999");
