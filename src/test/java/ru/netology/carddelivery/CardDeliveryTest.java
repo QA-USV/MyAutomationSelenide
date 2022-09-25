@@ -62,7 +62,6 @@ public class CardDeliveryTest {
         $(".notification__content").shouldHave(exactText("Встреча успешно забронирована на " + meetingDate));
     }
 
-
     @Test
     void shouldTestCalendarDateNextMonth() {
         $("[placeholder='Город']").setValue("Юж");
