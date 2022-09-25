@@ -46,6 +46,7 @@ public class CardDeliveryTest {
         $("[placeholder='Город']").setValue("Мо");
         $(".input__popup>div>div>div>div>div:nth-child(3)").click();
         $("[class='icon icon_size_m icon_name_calendar icon_theme_alfa-on-white']").click();
+        $("[data-day='1664485200000']").shouldBe(visible, Duration.ofSeconds(2));
         $("[data-day='1664485200000']").click();
         String meetingDate = $("[placeholder='Дата встречи']").getValue();
         $("[name='name']").setValue("Смит Джон");
