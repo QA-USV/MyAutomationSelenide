@@ -1,12 +1,13 @@
 package ru.netology.carddelivery;
 
+import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.commands.ShouldBe;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
+
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
@@ -60,6 +61,7 @@ public class CardDeliveryTest {
         $(".notification__title").shouldHave(exactText("Успешно!"));
         $(".notification__content").shouldHave(exactText("Встреча успешно забронирована на " + meetingDate));
     }
+
 
     @Test
     void shouldTestCalendarDateNextMonth() {
