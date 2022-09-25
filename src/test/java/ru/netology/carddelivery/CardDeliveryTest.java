@@ -32,7 +32,7 @@ public class CardDeliveryTest {
         String meetingDate = generateDate(3);
         $("[placeholder='Город']").setValue("Москва");
         $("[placeholder='Дата встречи']").doubleClick().sendKeys(Keys.DELETE + meetingDate);
-        $("[name='name']").setValue("Смит Джон");
+        $("[name='name']").setValue("Смит Джон-Джуниор");
         $("[name='phone']").setValue("+79999999999");
         $("[data-test-id='agreement']").click();
         $(".button__text").click();
