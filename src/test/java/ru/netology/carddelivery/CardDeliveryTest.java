@@ -13,8 +13,7 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 import static com.codeborne.selenide.Condition.*;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selenide.*;
 
 public class CardDeliveryTest {
 
@@ -50,10 +49,8 @@ public class CardDeliveryTest {
 
         $("[placeholder='Город']").setValue("Мо");
         $(".input__popup>div>div>div>div>div:nth-child(3)").click();
-        $("[class='icon icon_size_m icon_name_calendar icon_theme_alfa-on-white']").click();
-        $("[class='icon icon_size_m icon_name_calendar icon_theme_alfa-on-white']").shouldBe(visible, Duration.ofSeconds(10));
-        $("td[data-day='1664485200000']").shouldBe(interactable);
-        $("td[data-day='1664485200000']").click();
+        $(".icon.icon_size_m.icon_name_calendar.icon_theme_alfa-on-white").click();
+        $("[data-day='1664485200000']").click();
         String meetingDate = $("[placeholder='Дата встречи']").getValue();
         $("[name='name']").setValue("Смит Джон");
         $("[name='phone']").setValue("+79999999999");
