@@ -3,13 +3,17 @@ package ru.netology.carddelivery;
 import com.codeborne.selenide.conditions.Interactable;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.nio.channels.InterruptedByTimeoutException;
 import java.time.Duration;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.List;
 
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.*;
@@ -48,10 +52,15 @@ public class CardDeliveryTest {
         $("[placeholder='Город']").setValue("Мо");
         $(".input__popup>div>div>div>div>div:nth-child(3)").click();
         $("[class='icon icon_size_m icon_name_calendar icon_theme_alfa-on-white']").click();
-        $("[class='icon icon_size_m icon_name_calendar icon_theme_alfa-on-white']").shouldBe(visible, Duration.ofSeconds(3));
-        $("[data-day='1664485200000']").shouldBe(interactable);
+        $("[class='icon icon_size_m icon_name_calendar icon_theme_alfa-on-white']").shouldBe(interactable, Duration.ofSeconds(3));
+//        $("[data-day='1664485200000']").shouldBe(interactable);
+//        WebElement findDate
+//        wait();
+//        List<WebElement> date = wait.until(
+//        ExpectedConditions.presenceOfAllElementsLocatedBy(By.cssSelector("[class='icon icon_size_m icon_name_calendar icon_theme_alfa-on-white' + '[data-day='1664485200000']")));
+
         $("[data-day='1664485200000']").click();
-        $("[placeholder='Дата встречи']").shouldBe(visible, Duration.ofSeconds(1));
+//        $("[placeholder='Дата встречи']").shouldBe(visible, Duration.ofSeconds(1));
         String meetingDate = $("[placeholder='Дата встречи']").getValue();
         $("[name='name']").setValue("Смит Джон");
         $("[name='phone']").setValue("+79999999999");
