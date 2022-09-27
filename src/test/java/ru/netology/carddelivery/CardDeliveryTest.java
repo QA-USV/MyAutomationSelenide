@@ -36,7 +36,7 @@ public class CardDeliveryTest {
         $("[name='name']").setValue("Смит Джон-Джуниор");
         $("[name='phone']").setValue("+79999999999");
         $("[data-test-id='agreement']").click();
-        $(".button__text").click();
+        $("[type='button'] .button__text ").click();
         $(".notification__title").shouldBe(visible, Duration.ofSeconds(15));
         $(".notification__title").shouldHave(exactText("Успешно!"));
         $(".notification__content").shouldHave(exactText("Встреча успешно забронирована на " + meetingDate));
@@ -52,7 +52,7 @@ public class CardDeliveryTest {
         $("[name='name']").setValue("Смит Джон");
         $("[name='phone']").setValue("+79999999999");
         $("[data-test-id='agreement']").click();
-        $(".button__text").click();
+        $("[type='button'] .button__text ").click();
         $(".notification__title").shouldBe(visible, Duration.ofSeconds(15));
         $(".notification__title").shouldHave(exactText("Успешно!"));
         $(".notification__content").shouldHave(exactText("Встреча успешно забронирована на " + meetingDate));
@@ -69,7 +69,7 @@ public class CardDeliveryTest {
         $("[name='name']").setValue("Смит Джон");
         $("[name='phone']").setValue("+79999999999");
         $("[data-test-id='agreement']").click();
-        $(".button__text").click();
+        $("[type='button'] .button__text ").click();
         $(".notification__title").shouldBe(visible, Duration.ofSeconds(15));
         $(".notification__title").shouldHave(exactText("Успешно!"));
         $(".notification__content").shouldHave(exactText("Встреча успешно забронирована на " + meetingDate));
@@ -86,7 +86,7 @@ public class CardDeliveryTest {
         $("[name='name']").setValue("Смит Джон");
         $("[name='phone']").setValue("+79999999999");
         $("[data-test-id='agreement']").click();
-        $(".button__text").click();
+        $("[type='button'] .button__text ").click();
         $(".notification__title").shouldBe(visible, Duration.ofSeconds(15));
         $(".notification__title").shouldHave(exactText("Успешно!"));
         $(".notification__content").shouldHave(exactText("Встреча успешно забронирована на " + meetingDate));
