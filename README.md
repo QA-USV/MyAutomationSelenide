@@ -1,6 +1,6 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/x8hysqy2xofr0820?svg=true)](https://ci.appveyor.com/project/QA-USV/myautomationselenide)
 
-# Домашнее задание к занятию «2.2. Selenide»
+# Домашнее задание к занятию «Selenide»
 
 ## Задача: Заказ доставки карты
 
